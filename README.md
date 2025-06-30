@@ -2,6 +2,18 @@
 
 This is an automated website security/exposure audit application.
 
+## Environment Configuration
+
+Copy `.env.example` to `.env` and fill in the values for your Supabase
+credentials, workflow URLs and other settings. These environment variables are
+used both by the server and the front‑end so they can be tuned per environment.
+
+## Logging
+
+The Docker container now runs the server using **PM2** with the
+`pm2-logrotate` module enabled. Logs are written to `/var/log/rfx-audit` inside
+the container and rotated automatically to keep only the most recent files.
+
 ## Future Enhancements Roadmap
 
 - **User Authentication**: Implement OAuth (e.g., GitHub, Google) for returning users to view their scan history and manage settings.
