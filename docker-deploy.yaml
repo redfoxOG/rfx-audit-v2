@@ -7,9 +7,9 @@ services:
       context: .
       dockerfile: Dockerfile
     image: rfx-audit:latest       # tag written to local registry
-    container_name: rfx-audit
+    container_name: rfx-audit-v2
     ports:
-      - "8087:15413"
+      - "8087:3001"
     environment:
       N8N_URL: "https://n8n-xx485.redfoxsecurities.com/workflow/0em6J5pPs1D8p108"
       N8N_API_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmZjZDAyMi05ODEyLTQxYzktYmU3MS0wYTI3M2Q4MmMxY2IiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzUxMzA5MzIzLCJleHAiOjE3NTM4NDgwMDB9.AmNWUj2T31TTr4HOTyMw7LoyQ-8DPb7ByQY07ARtKqw"
