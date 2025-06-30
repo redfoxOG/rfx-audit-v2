@@ -36,4 +36,4 @@ EXPOSE 3001
 
 RUN mkdir -p /var/log/rfx-audit
 
-CMD ["pm2-runtime", "ecosystem.config.js"]
+CMD ["node", "server.js"]
