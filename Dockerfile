@@ -16,4 +16,4 @@ RUN npm ci --omit=dev \
  && mkdir -p /var/log/rfx-audit
 
 EXPOSE 3001
-CMD ["pm2-runtime", "ecosystem.config.js"]
+CMD ["pm2-runtime", "ecosystem.config.cjs"]
