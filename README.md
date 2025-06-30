@@ -11,3 +11,11 @@ This is an automated website security/exposure audit application.
 - **Subscription Model**: Implement a rate-limiting and subscription portal using Stripe to offer premium features, higher scan quotas, and advanced reporting.
 - **Theme Toggle**: Add a light-mode theme for users who prefer it over the default dark "hacker" theme.
 - **Custom Report Branding**: Allow premium users to add their own logo and branding to the generated PDF reports.
+
+## Testing
+
+Run ESLint before deployment to ensure code quality:
+
+```bash
+npm test
+```
