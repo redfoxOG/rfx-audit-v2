@@ -12,6 +12,10 @@ import PricingPage from '@/pages/Pricing';
 import FixesPage from '@/pages/Fixes';
 import PaymentSuccessPage from '@/pages/PaymentSuccess';
 import SessionPage from '@/pages/Session';
+import WorkspacesPage from '@/pages/Workspaces';
+import NotificationsPage from '@/pages/Notifications';
+import SubscribePage from '@/pages/Subscribe';
+import BrandingPage from '@/pages/Branding';
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/legal" element={<LegalPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/workspaces" element={<WorkspacesPage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
+        <Route path="/subscribe" element={<SubscribePage />} />
+        <Route path="/branding" element={<BrandingPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </MainLayout>

@@ -16,6 +16,7 @@ const FQDN_REGEX = /^(?!-)[A-Za-z0-9-]+([\-\.]{1}[a-z0-9]+)*\.[A-Za-z]{2,6}$/;
 const ScanPage = () => {
     const [domain, setDomain] = useState('');
     const [email, setEmail] = useState('');
+    const [profile, setProfile] = useState('quick');
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
     const { toast } = useToast();
@@ -42,6 +43,7 @@ const ScanPage = () => {
             scanId,
             domain,
             email,
+            profile,
             timestamp,
             hmac,
         };
@@ -119,6 +121,19 @@ const ScanPage = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="font-mono bg-input border-border focus:ring-primary focus:border-primary"
                                 />
+                            </div>
+                            <div className="space-y-2">
+                                <Label htmlFor="profile" className="font-mono text-primary">Scan Profile</Label>
+                                <select
+                                    id="profile"
+                                    value={profile}
+                                    onChange={(e) => setProfile(e.target.value)}
+                                    className="font-mono bg-input border-border focus:ring-primary focus:border-primary w-full p-2 rounded-md"
+                                >
+                                    <option value="quick">Quick Scan</option>
+                                    <option value="full">Full Pentest</option>
+                                    <option value="api">API Scan</option>
+                                </select>
                             </div>
                             <Button type="submit" disabled={isLoading} className="w-full font-mono text-lg uppercase tracking-wider">
                                 {isLoading ? 'Initiating...' : 'Launch Scan'}

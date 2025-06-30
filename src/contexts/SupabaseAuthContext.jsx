@@ -69,6 +69,18 @@ export const AuthProvider = ({ children }) => {
     return { error };
   }, [toast]);
 
+  const signInWithOAuth = useCallback(async (provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider });
+    if (error) {
+      toast({
+        variant: 'destructive',
+        title: 'OAuth Sign in Failed',
+        description: error.message || 'Something went wrong',
+      });
+    }
+    return { error };
+  }, [toast]);
+
   const signOut = useCallback(async () => {
     const { error } = await supabase.auth.signOut();
 
@@ -89,8 +101,9 @@ export const AuthProvider = ({ children }) => {
     loading,
     signUp,
     signIn,
+    signInWithOAuth,
     signOut,
-  }), [user, session, loading, signUp, signIn, signOut]);
+  }), [user, session, loading, signUp, signIn, signInWithOAuth, signOut]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
