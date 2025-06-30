@@ -10,19 +10,5 @@ services:
     container_name: rfx-audit-v2
     ports:
       - "8087:3001"
-    environment:
-      N8N_URL: "https://n8n-xx485.redfoxsecurities.com/workflow/0em6J5pPs1D8p108"
-      N8N_API_KEY: "REPLACE_WITH_N8N_API_KEY"
-      VITE_SUPABASE_URL: "https://your-supabase-instance.supabase.co"
-      VITE_SUPABASE_ANON_KEY: "REPLACE_WITH_SUPABASE_ANON_KEY"
-      VITE_N8N_WEBHOOK_URL: "https://n8n-xx485.redfoxsecurities.com/webhook/scan"
-      VITE_N8N_STATUS_ENDPOINT: "https://n8n-xx485.redfoxsecurities.com/webhook/status"
-      VITE_REPORT_BASE_URL: "https://your-report-storage.com/reports"
-      VITE_SECRET: "REPLACE_WITH_32_CHAR_HEX_SECRET"
-      VITE_STRIPE_PUBLISHABLE_KEY: "pk_test_REPLACE_WITH_YOUR_STRIPE_PUBLISHABLE_KEY"
-      VITE_STRIPE_SECRET: "sk_test_REPLACE_WITH_YOUR_STRIPE_SECRET_KEY"
-      VITE_STRIPE_WEBHOOK_SECRET: "whsec_REPLACE_WITH_YOUR_STRIPE_WEBHOOK_SECRET"
-      VITE_AI_TUNER_URL: "http://ai-tuner:8000"
-      VITE_CALENDLY_API_KEY: "REPLACE_WITH_YOUR_CALENDLY_API_KEY"
-      VITE_JITSI_DOMAIN: "meet.redfoxsecurities.com"
+    
     restart: unless-stopped
