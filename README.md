@@ -25,6 +25,7 @@ the container and rotated automatically to keep only the most recent files.
 - **Custom Report Branding**: Allow premium users to add their own logo and branding to the generated PDF reports.
 
 
+
 ## Testing
 
 Run ESLint before deployment to ensure code quality:
@@ -32,7 +33,7 @@ Run ESLint before deployment to ensure code quality:
 ```bash
 npm test
 ```
-=======
+
 
 ## Hosting Setup
 
@@ -50,7 +51,8 @@ npm test
      0 0 * * * certbot renew --quiet
      ```
    - If using a reverse proxy like Caddy or Nginx, you can rely on its built-in Let's Encrypt support instead.
-=======
+
 ## Deployment
 
 See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for instructions on deploying with Portainer and configuring an Nginx reverse proxy.
+

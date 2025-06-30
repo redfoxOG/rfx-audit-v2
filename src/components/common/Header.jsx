@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Shield, Wrench, DollarSign } from 'lucide-react';
+import { Shield, Wrench, DollarSign, Sun, Moon } from 'lucide-react';
 import { useAuth } from '@/contexts/SupabaseAuthContext';
 import { Button } from '@/components/ui/button';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Header = () => {
-  const { user, signOut } = useAuth();
+  const { user, signOut, signInWithOAuth } = useAuth();
+  const { theme, toggleTheme } = useTheme();
   const navItemClasses = ({ isActive }) =>
     `font-mono text-sm uppercase tracking-widest transition-colors hover:text-primary ${isActive ? 'text-primary' : 'text-gray-400'}`;
 
@@ -25,17 +27,24 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6">
           <NavLink to="/scan" className={navItemClasses}>Scan</NavLink>
           <NavLink to="/pricing" className={navItemClasses}>Pricing</NavLink>
+          <NavLink to="/subscribe" className={navItemClasses}>Subscribe</NavLink>
+          {user && <NavLink to="/branding" className={navItemClasses}>Branding</NavLink>}
           {user && <NavLink to="/dashboard" className={navItemClasses}>Dashboard</NavLink>}
+          {user && <NavLink to="/workspaces" className={navItemClasses}>Workspaces</NavLink>}
+          {user && <NavLink to="/notifications" className={navItemClasses}>Notifications</NavLink>}
           <NavLink to="/about" className={navItemClasses}>About</NavLink>
         </nav>
         <div className="flex items-center gap-2">
-           {user ? (
-             <Button onClick={signOut} variant="ghost" size="sm">Sign Out</Button>
-           ) : (
-             <Button asChild size="sm">
-                <Link to="/dashboard">Sign In</Link>
-             </Button>
-           )}
+          <Button onClick={toggleTheme} variant="ghost" size="icon">
+            {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </Button>
+          {user ? (
+            <Button onClick={signOut} variant="ghost" size="sm">Sign Out</Button>
+          ) : (
+            <Button onClick={() => signInWithOAuth('github')} size="sm">
+              Sign In
+            </Button>
+          )}
         </div>
       </div>
     </motion.header>
