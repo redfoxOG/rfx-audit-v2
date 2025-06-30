@@ -12,6 +12,7 @@ This is an automated website security/exposure audit application.
 - **Theme Toggle**: Add a light-mode theme for users who prefer it over the default dark "hacker" theme.
 - **Custom Report Branding**: Allow premium users to add their own logo and branding to the generated PDF reports.
 
+
 ## Hosting Setup
 
 1. **Point the Domain**
@@ -28,3 +29,8 @@ This is an automated website security/exposure audit application.
      0 0 * * * certbot renew --quiet
      ```
    - If using a reverse proxy like Caddy or Nginx, you can rely on its built-in Let's Encrypt support instead.
+=======
+## Deployment
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for instructions on deploying with Portainer and configuring an Nginx reverse proxy.
+
