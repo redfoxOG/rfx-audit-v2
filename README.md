@@ -25,6 +25,15 @@ the container and rotated automatically to keep only the most recent files.
 - **Custom Report Branding**: Allow premium users to add their own logo and branding to the generated PDF reports.
 
 
+## Testing
+
+Run ESLint before deployment to ensure code quality:
+
+```bash
+npm test
+```
+=======
+
 ## Hosting Setup
 
 1. **Point the Domain**
@@ -45,4 +54,3 @@ the container and rotated automatically to keep only the most recent files.
 ## Deployment
 
 See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for instructions on deploying with Portainer and configuring an Nginx reverse proxy.
-
