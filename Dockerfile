@@ -10,7 +10,7 @@ WORKDIR /app
 COPY --from=builder /app/dist ./dist
 COPY server.js ./server.js
 COPY package.json package-lock.json* ./
-COPY ecosystem.config.js ./ecosystem.config.js
+COPY ecosystem.config.cjs ./ecosystem.config.cjs
 RUN npm ci --omit=dev \
  && npm install -g pm2 \
  && mkdir -p /var/log/rfx-audit
