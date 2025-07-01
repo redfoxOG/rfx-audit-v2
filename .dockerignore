@@ -1,0 +1,14 @@
+node_modules
+.git
+docs
+issues
+supabase
+tools
+.dockerignore
+README.md
+.eslintrc.json
+.eslintignore
+.env
+.env.*
+*.log
+*.md
