@@ -2,9 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = process.cwd();
 
 dotenv.config();
 
@@ -53,15 +52,22 @@ app.get('/results', (req, res) => {
   res.json(latestResult);
 });
 
-// Serve the React build files
-app.use(express.static(path.join(__dirname, 'dist')));
+if (process.env.NODE_ENV !== 'test') {
+  // Serve the React build files
+  app.use(express.static(path.join(__dirname, 'dist')));
 
-// Fallback to index.html for SPA routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+  // Fallback to index.html for SPA routes
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+}
 
 const port = process.env.PORT || 3001;
-app.listen(port, () => {
-  console.log(`Server listening on ${port}`);
-});
+
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log(`Server listening on ${port}`);
+  });
+}
+
+export default app;
