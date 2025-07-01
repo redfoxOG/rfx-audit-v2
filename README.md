@@ -43,6 +43,18 @@ Run ESLint before deployment to ensure code quality:
 npm test
 ```
 
+## Generating llms.txt
+
+The build relies on a file named `public/llms.txt` that lists each page for the
+LLM. Generate it by running:
+
+```bash
+node tools/generate-llms.js
+```
+
+You can also run this automatically during `npm run build` by using the
+preconfigured build script in `package.json`.
+
 
 ## Hosting Setup
 

@@ -1,0 +1,15 @@
+## Pages
+- [About Us | RedFox Securities](/about): Learn about RedFox Securities
+- [Dashboard | RedFox Securities](/dashboard): Your deployment checklist and recent scans.
+- [Fix Vulnerabilities | RedFox Securities](/fixes): No description available
+- [Legal & Data Policy | RedFox Securities](/legal): Details on our data retention policy, terms of service, and privacy.
+- [Notifications | RedFox Securities](/notifications): No description available
+- [Payment Successful | RedFox Securities](/paymentsuccess): No description available
+- [Pricing | RedFox Securities](/pricing): Affordable, on-demand security fixes and professional support.
+- [RedFox Securities | Instant Website Exposure Audit & Fixes](/landing): Instant, professional-grade website security audits and on-demand vulnerability fixes. Pay only for what you need.
+- [Remote Session | RedFox Securities](/session): No description available
+- [Report Branding | RedFox Securities](/branding): No description available
+- [Scan Status:  | RedFox Securities](/status): No description available
+- [Start Scan | RedFox Securities](/scan): Initiate a new website security scan.
+- [Subscribe | RedFox Securities](/subscribe): No description available
+- [Workspaces | RedFox Securities](/workspaces): No description available
