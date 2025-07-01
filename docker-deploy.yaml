@@ -9,6 +9,6 @@ services:
     image: rfx-audit:latest       # tag written to local registry
     container_name: rfx-audit-v2
     ports:
-      - "8087:3001"
+      - "8085:3001"
     
     restart: unless-stopped
