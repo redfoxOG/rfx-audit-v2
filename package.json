@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest && npm run lint"
+    "test": "jest && npm run lint"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.0.2",

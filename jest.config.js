@@ -3,7 +3,6 @@ export default {
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  transformIgnorePatterns: ['jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy'

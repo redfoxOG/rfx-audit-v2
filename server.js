@@ -52,13 +52,15 @@ app.get('/results', (req, res) => {
   res.json(latestResult);
 });
 
-// Serve the React build files
-app.use(express.static(path.join(__dirname, 'dist')));
+if (process.env.NODE_ENV !== 'test') {
+  // Serve the React build files
+  app.use(express.static(path.join(__dirname, 'dist')));
 
-// Fallback to index.html for SPA routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+  // Fallback to index.html for SPA routes
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+}
 
 const port = process.env.PORT || 3001;
 
