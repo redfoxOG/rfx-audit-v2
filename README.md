@@ -8,6 +8,15 @@ Copy `.env.example` to `.env` and fill in the values for your Supabase
 credentials, workflow URLs and other settings. These environment variables are
 used both by the server and the front‑end so they can be tuned per environment.
 
+### Local setup
+
+1. Duplicate `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+2. Update each variable in `.env` with your own credentials.
+3. Keep this file private&mdash;it's ignored by Git and should not be committed.
+
 ## Logging
 
 The Docker container now runs the server using **PM2** with the
